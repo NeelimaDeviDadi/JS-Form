@@ -1,0 +1,104 @@
+<html>
+<head>
+<style>
+span{ 
+color:red;
+}
+</style>
+<script>
+function validate(){ 
+usr=document.getElementById("user").value;
+paswd=document.getElementById("pass").value;
+email=document.getElementById("email").value;
+number=document.getElementById("number").value;
+gender=document.getElementById("gender").value;
+if(usr==""|| usr== null || usr==" "){
+document.getElementById("uname").innerHTML="user name is missing";
+}
+if(usr==""|| usr== null || usr==" "){
+document.getElementById("email").innerHTML="email is missing";
+}
+if(usr==""|| usr== null || usr==" "){
+document.getElementById("number").innerHTML="number is missing";
+}
+   if(paswd==""|| paswd==null){
+document.getElementById("pwd").innerHTML="user password is missing";
+}
+if(usr==""|| usr== null || usr==" "){
+document.getElementById("gender").innerHTML="gender is missing";
+}
+}
+function userName(txt){
+if(txt!="" || txt!=null || txt!=""){
+document.getElementById("uname").innerHTML="";
+}
+ } 
+function email(txt){                                                                                                                                                                                                                                                                                  
+if(txt!=""||txt!=null){
+document.getElementById("email").innerHTML="";
+}
+ } 
+function number(txt){                                                                                                                                                                                                                                                                                  
+if(txt!=""||txt!=null){
+document.getElementById("number").innerHTML="";
+}
+ 
+ } 
+function number(txt){                                                                                                                                                                                                                                                                                  
+if(txt!=""||txt!=null){
+document.getElementById("gender").innerHTML="";
+}
+}
+
+function userpwd(txt){                                                                                                                                                                                                                                                                                  
+if(txt!=""||txt!=null){
+document.getElementById("pwd").innerHTML="";
+}
+ }        
+ </script>                                                                                                                                                                                                                                                      
+<body>
+<div>
+<span>*</span>
+<label>user name</label>
+<span id="uname"></span>
+</div>
+<div>
+<input type="text" id="user" onkeypressup="userName(this.value)"/>
+</div>
+<div>
+<span>*</span>
+<label>email</label>
+<span id="email"></span>
+</div>
+<div>
+<input type="text" id="email" onkeypressup="email(this.value)"/>
+</div>
+<div>
+<span>*</span>
+<label>number</label>
+<span id="number"></span>
+</div>
+<div>
+<input type="text" id="number" onkeypressup="number(this.value)"/>
+</div>
+<div>
+<span>*</span>
+<label>gender</label>
+<span id="gender"></span>
+</div>
+<div>
+<input type="text" id="gender" onkeypressup="gender(this.value)"/>
+</div>
+<div>
+<span>*</span>
+<label>password</label>
+<span id="pwd"></span>
+</div>
+<div>
+<input type="password" id="pass" onkeyup="userpwd(this.value)"/>
+</div>
+<div>
+<button onclick="validate()">login</button>
+</div>
+</body>
+</html>                                                                                                      
